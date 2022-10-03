@@ -1,0 +1,41 @@
+.skills {
+  &__list {
+    list-style: none;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding-left: 215px;
+    padding-right: 215px;
+  }
+
+  &__item {
+    width: 270px;
+  }
+
+  &__name {
+    color: $main-normal-text-color;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    width: 270px;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 3%;
+    color: $main-text-color;
+  }
+
+  &__icon {
+    display: flex;
+    width: 270px;
+    height: 120px;
+    background: #f5f4fa;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    margin-bottom: 30px;
+  }
+}

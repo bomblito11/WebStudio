@@ -1,0 +1,82 @@
+.team {
+  max-height: 708px;
+  background-color: #f5f4fa;
+  line-height: 1.17;
+  max-width: 1600px;
+  margin: auto;
+
+  .container {
+    text-align: center;
+  }
+
+  &__title {
+    color: $main-normal-text-color;
+    font-size: 36px;
+    font-weight: 700;
+  }
+
+  &__members-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    gap: 30px;
+  }
+}
+
+.team-member {
+  &__name {
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    color: $main-normal-text-color;
+    margin-top: 30px;
+    margin-bottom: 10px;
+  }
+
+  &__job {
+    font-size: 16px;
+    text-align: center;
+    color: $main-text-color;
+  }
+
+  &__box {
+    background-color: $logo-color;
+    max-width: 270px;
+    max-height: 428px;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+      0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 0px 0px 4px 4px;
+  }
+}
+
+.team-media {
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding-top: 16px;
+  fill: $icon-color;
+
+  &__button {
+    width: 44px;
+    height: 44px;
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    background: rgba(255, 255, 255, 0.1);
+    margin-bottom: 30px;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: $main-link-color;
+      fill: $logo-color;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+}

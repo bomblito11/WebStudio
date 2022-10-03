@@ -1,0 +1,33 @@
+.clients {
+  line-height: 1.17;
+  .container {
+    text-align: center;
+  }
+
+  &__list {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 30px;
+    padding-top: 50px;
+  }
+
+  &__item {
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    display: flex;
+    width: 170px;
+    height: 92px;
+    justify-content: center;
+    align-items: center;
+    fill: $icon-color;
+
+    &:hover {
+      fill: $main-link-color;
+      border-color: $main-link-color;
+      cursor: pointer;
+      transition-duration: 250ms;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+}
