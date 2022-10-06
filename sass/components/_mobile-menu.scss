@@ -1,0 +1,134 @@
+.js-menu-container {
+  width: 100vw;
+  height: 100vh;
+  border: none;
+  background-color: #fff;
+  padding-left: 40px;
+  z-index: 999;
+  transform: translateX(100%);
+  transition-property: transform, visibility;
+  transition-duration: 250ms;
+  transition-timing-function: ease-in-out;
+  position: fixed;
+  top: 0;
+  right: 0;
+}
+
+.js-menu-container.is-open {
+  transform: translateX(0);
+}
+
+.is-open {
+  visibility: visible;
+}
+
+.menu__button {
+  display: flex;
+}
+
+.js-open-menu {
+  max-height: 40px;
+  width: 40px;
+  background-color: transparent;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: none;
+}
+
+.menu__open-icon {
+  min-width: 40px;
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.js-close-menu {
+  background-color: transparent;
+  padding: 0;
+  border: none;
+  margin-top: 21px;
+  margin-left: 390px;
+  width: 25px;
+  height: 25px;
+}
+
+.menu__close-btn {
+  font-size: 30px;
+}
+
+.mobile-nav {
+  li {
+    list-style: none;
+  }
+
+  &__item {
+    display: block;
+    color: $main-normal-text-color;
+    text-decoration: none;
+    font-size: 40px;
+    font-family: $main-font;
+    font-weight: 500;
+    &--active {
+      color: $main-link-color;
+    }
+    &:nth-child(1),
+    :nth-child(2) {
+      padding-bottom: 36px;
+    }
+  }
+}
+
+.mobile-contact {
+  li {
+    list-style: none;
+  }
+
+  &__item {
+    display: block;
+    font-family: $main-font;
+    font-weight: 500;
+    text-decoration: none;
+    &:nth-child(1) {
+      font-size: 34px;
+      color: $main-link-color;
+      padding-top: 302px;
+    }
+
+    &:nth-child(2) {
+      font-size: 24px;
+      padding-top: 32px;
+      color: $main-text-color;
+    }
+  }
+}
+
+.mobile-socials {
+  padding-top: 64px;
+  padding-bottom: 48px;
+  li {
+    list-style: none;
+    &:not(:last-child)::after {
+      content: "|";
+      padding-left: 10px;
+      padding-right: 10px;
+      color: rgba($color: #212121, $alpha: 0.2);
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__item {
+    text-decoration: none;
+    font-size: 18px;
+    font-family: $main-font;
+    font-weight: 500;
+    color: $main-link-color;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .menu__button {
+    display: none;
+  }
+}

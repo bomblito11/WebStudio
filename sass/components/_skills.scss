@@ -1,16 +1,18 @@
 .skills {
   &__list {
     list-style: none;
-    text-align: left;
+    text-align: center;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     gap: 30px;
-    padding-left: 215px;
-    padding-right: 215px;
   }
 
   &__item {
-    width: 270px;
+    max-width: 450px;
+    &:last-of-type {
+      padding-bottom: 60px;
+    }
   }
 
   &__name {
@@ -21,7 +23,6 @@
   }
 
   &__description {
-    width: 270px;
     font-size: 14px;
     line-height: 1.71;
     letter-spacing: 3%;
@@ -29,13 +30,38 @@
   }
 
   &__icon {
-    display: flex;
-    width: 270px;
+    max-width: 450px;
     height: 120px;
     background: #f5f4fa;
     justify-content: center;
     align-items: center;
     border-radius: 4px;
     margin-bottom: 30px;
+    padding-top: 25px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .skills {
+    &__list {
+      text-align: left;
+      flex-direction: row;
+      padding-left: 215px;
+      padding-right: 215px;
+    }
+
+    &__item {
+      max-width: 270px;
+    }
+
+    &__icon {
+      width: 270px;
+      height: 120px;
+      text-align: center;
+    }
+
+    &__description {
+      width: 270px;
+    }
   }
 }

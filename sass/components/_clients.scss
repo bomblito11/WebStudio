@@ -1,22 +1,31 @@
 .clients {
+  max-width: 480px;
   line-height: 1.17;
+  padding-bottom: 60px;
+  margin: auto;
   .container {
     text-align: center;
   }
 
+  &__title {
+    font-weight: 700;
+    font-size: 28px;
+  }
+
   &__list {
     display: flex;
+    flex-wrap: wrap;
     list-style: none;
     justify-content: center;
     gap: 30px;
-    padding-top: 50px;
+    padding-top: 30px;
   }
 
   &__item {
     border: 1px solid #afb1b8;
     border-radius: 4px;
     display: flex;
-    width: 170px;
+    width: 210px;
     height: 92px;
     justify-content: center;
     align-items: center;
@@ -28,6 +37,29 @@
       cursor: pointer;
       transition-duration: 250ms;
       transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .clients {
+    max-width: 1600px;
+
+    &__title {
+      font-family: $main-font;
+      font-weight: 700;
+      font-size: 36px;
+    }
+
+    &__list {
+      flex-wrap: nowrap;
+      gap: 30px;
+      padding-top: 50px;
+    }
+
+    &__item {
+      width: 170px;
+      height: 92px;
     }
   }
 }
