@@ -1,5 +1,4 @@
 .clients {
-  max-width: 480px;
   line-height: 1.17;
   padding-bottom: 60px;
   margin: auto;
@@ -8,12 +7,14 @@
   }
 
   &__title {
+    font-family: $main-font;
     font-weight: 700;
     font-size: 28px;
   }
 
   &__list {
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
     list-style: none;
     justify-content: center;
@@ -41,6 +42,25 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .clients {
+    &__title {
+      font-size: 36px;
+    }
+
+    &__list {
+      flex-wrap: wrap;
+      gap: 30px;
+      padding-top: 50px;
+    }
+
+    &__item {
+      width: 226px;
+      height: 92px;
+    }
+  }
+}
+
 @media screen and (min-width: 1200px) {
   .clients {
     max-width: 1600px;
@@ -53,8 +73,6 @@
 
     &__list {
       flex-wrap: nowrap;
-      gap: 30px;
-      padding-top: 50px;
     }
 
     &__item {

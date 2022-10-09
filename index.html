@@ -79,7 +79,7 @@
               aria-controls="mobile-menu"
             >
               <svg class="menu__open-icon">
-                <use href="images/icons.svg#icon-menu"></use>
+                <use href="./images/icons.svg#icon-menu"></use>
               </svg>
             </button>
           </div>
@@ -215,7 +215,7 @@
             <li class="skills__item">
               <div class="skills__icon">
                 <svg width="70" height="70">
-                  <use href="images/icons.svg#icon-antenna-1"></use>
+                  <use href="./images/icons.svg#icon-antenna-1"></use>
                 </svg>
               </div>
               <h3 class="skills__name">LOREM IPSUM</h3>
@@ -227,7 +227,7 @@
             <li class="skills__item">
               <div class="skills__icon">
                 <svg width="70" height="70">
-                  <use href="images/icons.svg#icon-clock-1"></use>
+                  <use href="./images/icons.svg#icon-clock-1"></use>
                 </svg>
               </div>
               <h3 class="skills__name">LOREM IPSUM</h3>
@@ -239,7 +239,7 @@
             <li class="skills__item">
               <div class="skills__icon">
                 <svg width="70" height="70">
-                  <use href="images/icons.svg#icon-diagram-1"></use>
+                  <use href="./images/icons.svg#icon-diagram-1"></use>
                 </svg>
               </div>
               <h3 class="skills__name">LOREM IPSUM</h3>
@@ -251,7 +251,7 @@
             <li class="skills__item">
               <div class="skills__icon">
                 <svg width="70" height="70">
-                  <use href="images/icons.svg#icon-astronaut-1"></use>
+                  <use href="./images/icons.svg#icon-astronaut-1"></use>
                 </svg>
               </div>
               <h3 class="skills__name">LOREM IPSUM</h3>
@@ -270,34 +270,49 @@
           <ul class="activities__list">
             <li>
               <div class="activities__box">
-                <img
-                  src="./images/zdjecie1.jpg"
-                  alt="pisze kod źródłowy"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/activities/app1_desktop.jpg    1x,
+                      ./images/activities/app1_desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)" />
+                  <img
+                    src="./images/activities/app1_desktop.jpg"
+                    alt="pisze kod źródłowy"
+                /></picture>
                 <p class="activities__caption">Aplikacje komputerowe</p>
               </div>
             </li>
             <li>
               <div class="activities__box">
-                <img
-                  src="./images/zdjecie2.jpg"
-                  alt="tworzy aplikacje na smartfon"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/activities/app2_desktop.jpg    1x,
+                      ./images/activities/app2_desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)" />
+                  <img
+                    src="./images/activities/app2_desktop.jpg"
+                    alt="tworzy aplikacje na smartfon"
+                /></picture>
                 <p class="activities__caption">Aplikacje mobilne</p>
               </div>
             </li>
             <li>
               <div class="activities__box">
-                <img
-                  src="./images/zdjecie3.jpg"
-                  alt="wybiera kolor z palety"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/activities/app3_desktop.jpg    1x,
+                      ./images/activities/app3_desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)" />
+                  <img
+                    src="./images/activities/app3_desktop.jpg"
+                    alt="wybiera kolor z palety"
+                /></picture>
                 <p class="activities__caption">Rozwiązania graficzne</p>
               </div>
             </li>
@@ -311,12 +326,34 @@
           <ul class="team__members-list">
             <li class="team-member">
               <figure class="team-member__box">
-                <img
-                  src="./images/zdj4_mobile.jpg"
-                  alt="John Doe"
-                  width="450"
-                  height="460"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/pd_mobile.jpg    1x,
+                      ./images/team/pd_mobile@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/pd_tablet.jpg    1x,
+                      ./images/team/pd_tablet@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/pd_desktop.jpg    1x,
+                      ./images/team/pd_desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="team-member__img"
+                    alt="John Doe"
+                    src="./images/pd_mobile.jpg"
+                  />
+                </picture>
                 <figcaption>
                   <p class="team-member__name">John Doe</p>
                   <p class="team-member__job">Product Designer</p>
@@ -353,14 +390,36 @@
                 </figcaption>
               </figure>
             </li>
-            <li>
+            <li class="team-member">
               <figure class="team-member__box">
-                <img
-                  src="./images/zdj5_mobile.jpg"
-                  alt="John Doe"
-                  width="450"
-                  height="460"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/fd_mobile.jpg    1x,
+                      ./images/team/fd_mobile@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/fd_tablet.jpg    1x,
+                      ./images/team/fd_tablet@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/fd_desktop.jpg    1x,
+                      ./images/team/fd_desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="team-member__img"
+                    alt="John Doe"
+                    src="./images/fd_mobile.jpg"
+                  />
+                </picture>
                 <figcaption>
                   <p class="team-member__name">John Doe</p>
                   <p class="team-member__job">Frontend Developer</p>
@@ -397,14 +456,36 @@
                 </figcaption>
               </figure>
             </li>
-            <li>
+            <li class="team-member">
               <figure class="team-member__box">
-                <img
-                  src="./images/zdj6_mobile.jpg"
-                  alt="John Doe"
-                  width="450"
-                  height="460"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/mr_mobile.jpg    1x,
+                      ./images/team/mr_mobile@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/mr_tablet.jpg    1x,
+                      ./images/team/mr_tablet@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/mr_desktop.jpg    1x,
+                      ./images/team/mr_desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="team-member__img"
+                    alt="John Doe"
+                    src="./images/mr_mobile.jpg"
+                  />
+                </picture>
                 <figcaption>
                   <p class="team-member__name">John Doe</p>
                   <p class="team-member__job">Marketing</p>
@@ -441,9 +522,36 @@
                 </figcaption>
               </figure>
             </li>
-            <li>
+            <li class="team-member">
               <figure class="team-member__box">
-                <img src="./images/zdj7_mobile.jpg" alt="John Doe" />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/team/ui_mobile.jpg    1x,
+                      ./images/team/ui_mobile@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/ui_tablet.jpg    1x,
+                      ./images/team/ui_tablet@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/team/ui_desktop.jpg    1x,
+                      ./images/team/ui_desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    class="team-member__img"
+                    alt="John Doe"
+                    src="./images/ui_mobile.jpg"
+                  />
+                </picture>
                 <figcaption>
                   <p class="team-member__name">John Doe</p>
                   <p class="team-member__job">UI Designer</p>
@@ -577,9 +685,9 @@
         </section>
         <section class="footer-newsletter">
           <p class="footer-newsletter__title">Zapisz się do newslettera</p>
-          <div>
-            <form class="newsletter">
-              <label>
+          <div class="newsletter">
+            <form>
+              <label class="newsletter__label">
                 <input
                   class="newsletter__input"
                   type="email"

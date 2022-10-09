@@ -2,7 +2,8 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Portfolio</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -14,6 +15,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="css/main.min.css" />
+
+    <title>Portfolio</title>
   </head>
   <body>
     <header>
@@ -67,7 +70,65 @@
               </li>
             </ul>
           </div>
+          <div class="menu__button">
+            <button
+              type="button"
+              class="js-open-menu"
+              aria-expanded="false"
+              aria-controls="mobile-menu"
+            >
+              <svg class="menu__open-icon">
+                <use href="./images/icons.svg#icon-menu"></use>
+              </svg>
+            </button>
+          </div>
         </div>
+      </div>
+
+      <!--MOBILE-MENU-->
+      <div class="js-menu-container" id="mobile-menu">
+        <button type="button" class="menu-toggle js-close-menu">
+          <p class="menu__close-btn">x</p>
+        </button>
+        <nav>
+          <div class="mobile-menu">
+            <ul class="mobile-nav">
+              <li>
+                <a
+                  href="agencja.html"
+                  class="mobile-nav__item mobile-nav__item--active"
+                  >Agencja</a
+                >
+              </li>
+              <li>
+                <a href="portfolio.html" class="mobile-nav__item">Portfolio</a>
+              </li>
+              <li><a href="kontakt" class="mobile-nav__item">Kontakt</a></li>
+            </ul>
+          </div>
+
+          <div class="mobile-contact">
+            <ul class="mobile-contact__list">
+              <li>
+                <a href="tel:+48111111111" class="mobile-contact__item">
+                  +48 111 111 111</a
+                >
+              </li>
+              <a href="mailto:info@devstudio.com" class="mobile-contact__item">
+                info@devstudio.com</a
+              >
+            </ul>
+          </div>
+
+          <div class="mobile-socials">
+            <ul class="mobile-socials__list">
+              <li><a href="" class="mobile-socials__item">Instagram</a></li>
+              <li><a href="" class="mobile-socials__item">Twitter</a></li>
+              <li><a href="" class="mobile-socials__item">Facebook</a></li>
+              <li><a href="" class="mobile-socials__item">LinkedIn</a></li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </header>
 
@@ -96,12 +157,34 @@
           <ul class="projects__list">
             <li class="projects__item">
               <figure class="item__box">
-                <img
-                  src="./images/img1.jpg"
-                  alt="laptop ze stroną internetową"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/products/technocrack_mobile.jpg    1x,
+                      ./images/products/technocrack_mobile@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products/technocrack_tablet.jpg    1x,
+                      ./images/products/technocrack_tablet@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products/technocrack_desktop.jpg    1x,
+                      ./images/products/technocrack_desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/products/technocrack_mobile.jpg"
+                    alt="laptop ze stroną internetową"
+                  />
+                </picture>
+
                 <div class="item__caption-box">
                   <p class="item__caption">
                     Technocrack jest popularną platformą wykorzystywaną do
@@ -119,12 +202,33 @@
 
             <li class="projects__item">
               <figure class="item__box">
-                <img
-                  src="./images/img2.jpg"
-                  alt="dwóch koszykarzy"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/products/basket_mobile.jpg    1x,
+                      ./images/products/basket_mobile@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products/basket_tablet.jpg    1x,
+                      ./images/products/basket_tablet@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products/basket_desktop.jpg    1x,
+                      ./images/products/basket_desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/products/basket_mobile.jpg"
+                    alt="laptop ze stroną internetową"
+                  />
+                </picture>
                 <div class="item__caption-box">
                   <p class="item__caption">
                     Technocrack jest popularną platformą wykorzystywaną do
@@ -142,12 +246,33 @@
 
             <li class="projects__item">
               <figure class="item__box">
-                <img
-                  src="./images/img3.jpg"
-                  alt="logo Seafood"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/products/seafood_mobile.jpg    1x,
+                      ./images/products/seafood_mobile@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products/seafood_tablet.jpg    1x,
+                      ./images/products/seafood_tablet@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products/seafood_desktop.jpg    1x,
+                      ./images/products/seafood_desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/products/seafood_mobile.jpg"
+                    alt="laptop ze stroną internetową"
+                  />
+                </picture>
                 <div class="item__caption-box">
                   <p class="item__caption">
                     Technocrack jest popularną platformą wykorzystywaną do
@@ -165,12 +290,33 @@
 
             <li class="projects__item">
               <figure class="item__box">
-                <img
-                  src="./images/img4.jpg"
-                  alt="czarne słuchawki"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/products/headphones_mobile.jpg    1x,
+                      ./images/products/headphones_mobile@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products/headphones_tablet.jpg    1x,
+                      ./images/products/headphones_tablet@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products/headphones_desktop.jpg    1x,
+                      ./images/products/headphones_desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/products/headphones_mobile.jpg"
+                    alt="laptop ze stroną internetową"
+                  />
+                </picture>
                 <div class="item__caption-box">
                   <p class="item__caption">
                     Technocrack jest popularną platformą wykorzystywaną do
@@ -188,12 +334,33 @@
 
             <li class="projects__item">
               <figure class="item__box">
-                <img
-                  src="./images/img5.jpg"
-                  alt="dwa pudełka z napisami"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/products/boxes_mobile.jpg    1x,
+                      ./images/products/boxes_mobile@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products/boxes_tablet.jpg    1x,
+                      ./images/products/boxes_tablet@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products/boxes_desktop.jpg    1x,
+                      ./images/products/boxes_desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/products/boxes_mobile.jpg"
+                    alt="laptop ze stroną internetową"
+                  />
+                </picture>
                 <div class="item__caption-box">
                   <p class="item__caption">
                     Technocrack jest popularną platformą wykorzystywaną do
@@ -211,12 +378,33 @@
 
             <li class="projects__item">
               <figure class="item__box">
-                <img
-                  src="./images/img6.jpg"
-                  alt="monitor ze stroną intternetową"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/products/pc_mobile.jpg    1x,
+                      ./images/products/pc_mobile@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products/pc_tablet.jpg    1x,
+                      ./images/products/pc_tablet@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products/pc_desktop.jpg    1x,
+                      ./images/products/pc_desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/products/pc_mobile.jpg"
+                    alt="laptop ze stroną internetową"
+                  />
+                </picture>
                 <div class="item__caption-box">
                   <p class="item__caption">
                     Technocrack jest popularną platformą wykorzystywaną do
@@ -234,12 +422,33 @@
 
             <li class="projects__item">
               <figure class="item__box">
-                <img
-                  src="./images/img7.jpg"
-                  alt="magazyn limited edition"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/products/book_mobile.jpg    1x,
+                      ./images/products/book_mobile@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products/book_tablet.jpg    1x,
+                      ./images/products/book_tablet@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products/book_desktop.jpg    1x,
+                      ./images/products/book_desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/products/book_mobile.jpg"
+                    alt="laptop ze stroną internetową"
+                  />
+                </picture>
                 <div class="item__caption-box">
                   <p class="item__caption">
                     Technocrack jest popularną platformą wykorzystywaną do
@@ -257,12 +466,33 @@
 
             <li class="projects__item">
               <figure class="item__box">
-                <img
-                  src="./images/img8.jpg"
-                  alt="etykieta projektu lab"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/products/tag_mobile.jpg    1x,
+                      ./images/products/tag_mobile@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products/tag_tablet.jpg    1x,
+                      ./images/products/tag_tablet@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products/tag_desktop.jpg    1x,
+                      ./images/products/tag_desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/products/tag_mobile.jpg"
+                    alt="laptop ze stroną internetową"
+                  />
+                </picture>
                 <div class="item__caption-box">
                   <p class="item__caption">
                     Technocrack jest popularną platformą wykorzystywaną do
@@ -280,12 +510,33 @@
 
             <li class="projects__item">
               <figure class="item__box">
-                <img
-                  src="./images/img9.jpg"
-                  alt="growing business na laptopie"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/products/laptop_mobile.jpg    1x,
+                      ./images/products/laptop_mobile@2x.jpg 2x
+                    "
+                    media="(min-width: 320px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products/laptop_tablet.jpg    1x,
+                      ./images/products/laptop_tablet@2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/products/laptop_desktop.jpg    1x,
+                      ./images/products/laptop_desktop@2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <img
+                    src="./images/products/laptop_mobile.jpg"
+                    alt="laptop ze stroną internetową"
+                  />
+                </picture>
                 <div class="item__caption-box">
                   <p class="item__caption">
                     Technocrack jest popularną platformą wykorzystywaną do
@@ -359,27 +610,36 @@
         </section>
         <section class="footer-newsletter">
           <p class="footer-newsletter__title">Zapisz się do newslettera</p>
-          <form class="newsletter">
-            <label>
-              <input
-                class="newsletter__input"
-                type="email"
-                name="email"
-                placeholder="E-mail"
-              />
-            </label>
-            <button type="submit" class="newsletter__button">
-              Zapisz się<svg
-                class="newsletter__button--icon"
-                width="24px"
-                height="24px"
-              >
-                <use href="./images/icons.svg#icon-icon-send"></use>
-              </svg>
-            </button>
-          </form>
+          <div class="newsletter">
+            <form>
+              <label>
+                <input
+                  class="newsletter__input"
+                  type="email"
+                  name="email"
+                  placeholder="E-mail"
+                />
+              </label>
+              <button type="submit" class="newsletter__button">
+                Zapisz się<svg
+                  class="newsletter__button--icon"
+                  width="24px"
+                  height="24px"
+                >
+                  <use href="./images/icons.svg#icon-icon-send"></use>
+                </svg>
+              </button>
+            </form>
+          </div>
         </section>
       </div>
     </footer>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="js/mobile-menu.js"></script>
   </body>
 </html>

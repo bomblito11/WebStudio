@@ -1,4 +1,6 @@
 .skills {
+  justify-content: center;
+  text-align: left;
   &__list {
     list-style: none;
     text-align: center;
@@ -9,7 +11,6 @@
   }
 
   &__item {
-    max-width: 450px;
     &:last-of-type {
       padding-bottom: 60px;
     }
@@ -30,7 +31,6 @@
   }
 
   &__icon {
-    max-width: 450px;
     height: 120px;
     background: #f5f4fa;
     justify-content: center;
@@ -41,23 +41,46 @@
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .skills {
     &__list {
       text-align: left;
       flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+    &__item {
+      max-width: 354px;
+    }
+
+    &__icon {
+      width: 354px;
+      text-align: center;
+    }
+
+    &__description {
+      width: 354px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .skills {
+    &__list {
+      flex-wrap: nowrap;
       padding-left: 215px;
       padding-right: 215px;
     }
 
     &__item {
       max-width: 270px;
+      &:last-of-type {
+        padding-bottom: 0px;
+      }
     }
 
     &__icon {
       width: 270px;
-      height: 120px;
-      text-align: center;
     }
 
     &__description {

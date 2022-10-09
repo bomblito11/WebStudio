@@ -27,31 +27,20 @@ header {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .menu {
     height: 80px;
     line-height: 1.17;
-    display: flex;
-    border-bottom: 1px solid #ececec;
+
     &__navigation {
       display: flex;
     }
 
     &__logo {
-      font-family: $primary-font;
       font-size: 26px;
-      text-decoration: none;
-      letter-spacing: 3%;
-      display: flex;
       padding-top: 24px;
       padding-bottom: 25px;
       line-height: 1.31;
-      &--blue {
-        color: $main-link-color;
-      }
-      &--black {
-        color: #000;
-      }
     }
 
     &__list {
@@ -61,8 +50,7 @@ header {
       flex-direction: row;
       margin-top: 32px;
       padding-left: 93px;
-      padding-right: 371px;
-      gap: 46px;
+      gap: 60px;
     }
 
     &__link {
@@ -90,6 +78,14 @@ header {
         border-radius: 2px;
         background-color: $main-link-color;
       }
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .menu {
+    &__list {
+      gap: 46px;
     }
   }
 }

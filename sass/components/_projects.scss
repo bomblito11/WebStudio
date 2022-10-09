@@ -1,10 +1,11 @@
 .projects {
+  padding-bottom: 60px;
   &__list {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
-    align-content: center;
+    justify-content: center;
     padding-top: 34px;
     line-height: 1.67;
 
@@ -19,7 +20,7 @@
   }
 
   &__item {
-    width: 370px;
+    width: 450px;
     background-color: $logo-color;
     &:hover {
       box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
@@ -75,5 +76,13 @@
     font-size: 16px;
     color: $main-text-color;
     text-align: left;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .projects {
+    &__item {
+      width: 354px;
+    }
   }
 }
