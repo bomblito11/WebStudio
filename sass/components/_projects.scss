@@ -42,6 +42,10 @@
     }
   }
 
+  &__img {
+    width: 100%;
+  }
+
   &__caption-box {
     height: 100%;
     width: 100%;
@@ -83,6 +87,14 @@
   .projects {
     &__item {
       width: 354px;
+    }
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .projects {
+    &__item {
+      width: 370px;
     }
   }
 }

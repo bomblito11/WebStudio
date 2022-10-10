@@ -954,13 +954,15 @@ footer .container {
           justify-content: center;
 }
 .newsletter__input {
-  width: 450px;
+  width: 100%;
   height: 50px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
           filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: inherit;
+  padding-left: 16px;
+  padding-right: 16px;
   font-size: 16px;
   line-height: 1.25px;
   letter-spacing: 0.03em;
@@ -969,27 +971,22 @@ footer .container {
 .newsletter__input::-webkit-input-placeholder {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.6);
-  padding-left: 16px;
 }
 .newsletter__input::-moz-placeholder {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.6);
-  padding-left: 16px;
 }
 .newsletter__input:-ms-input-placeholder {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.6);
-  padding-left: 16px;
 }
 .newsletter__input::-ms-input-placeholder {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.6);
-  padding-left: 16px;
 }
 .newsletter__input::placeholder {
   font-size: 16px;
   color: rgba(255, 255, 255, 0.6);
-  padding-left: 16px;
 }
 .newsletter__button {
   width: 200px;
@@ -1048,7 +1045,7 @@ footer .container {
     gap: 12px;
   }
   .newsletter__input {
-    width: 450px;
+    width: 100%;
     height: 50px;
   }
 }
@@ -1061,9 +1058,6 @@ footer .container {
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
             flex-direction: row;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
     -webkit-column-gap: 0;
        -moz-column-gap: 0;
             column-gap: 0;
@@ -1102,7 +1096,7 @@ footer .container {
             flex-direction: row;
   }
   .newsletter__input {
-    width: 358px;
+    width: 100%;
     height: 50px;
   }
 }
@@ -1385,6 +1379,9 @@ footer .container {
   -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
           transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+.item__img {
+  width: 100%;
+}
 .item__caption-box {
   height: 100%;
   width: 100%;
@@ -1422,5 +1419,10 @@ footer .container {
 @media screen and (min-width: 768px) {
   .projects__item {
     width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .projects__item {
+    width: 370px;
   }
 }/*# sourceMappingURL=main.css.map */
